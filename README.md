@@ -72,17 +72,23 @@ uav-altitude-feature-alignment/
 |   |-- 3a.ipynb                 # Main research and experiment notebook
 |   `-- uav_3a_protocol.pdf      # Detailed Question 3a protocol
 |-- data/
-|   |-- manifest.csv             # Image metadata and object-group assignments
-|   |-- raw/                     # Original flight imagery
-|   |-- patches_fixed_canvas/    # Scale-preserving object patches
-|   `-- features/                # Saved frozen-encoder features
+|   |-- README.md                # Data layout, provenance, and storage rules
+|   |-- manifest.csv             # Master observation manifest used by the notebook
+|   |-- raw/<dataset>/           # Original downloaded or captured data (Git-ignored)
+|   |-- patches_fixed_canvas/    # Reproducible scale-preserving object patches
+|   |-- features/                # Saved frozen-encoder features
+|   |-- manifests/               # Dataset-specific observation tables
+|   |-- splits/                  # Fixed experiment partitions
+|   `-- audits/                  # Compact dataset audit results
+|-- scripts/
+|   `-- audit_seadronessee_tracks.js
 |-- results/
 |   `-- q3a/                     # Evaluation tables and figures
 |-- uav_30m_to_80m_high_level_study_draft.pdf
 `-- README.md
 ```
 
-Large imagery and generated features should normally be stored outside Git or managed with an appropriate large-file/data-versioning system.
+Raw imagery, downloaded annotations, generated patches, and feature arrays are excluded by `.gitignore`. See [`data/README.md`](data/README.md) for the dataset layout, provenance requirements, and SeaDronesSee audit details.
 
 ## Notebook capabilities
 

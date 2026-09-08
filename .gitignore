@@ -1,0 +1,28 @@
+# Python and Jupyter
+.venv/
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Local environment and editor files
+.env
+.vscode/
+.idea/
+
+# Original datasets and generated artefacts
+# Directory placeholders remain tracked so a fresh clone has the expected layout.
+data/raw/**/*
+!data/raw/**/
+!data/raw/**/.gitkeep
+
+data/features/**/*
+!data/features/**/
+!data/features/**/.gitkeep
+
+data/patches_fixed_canvas/**/*
+!data/patches_fixed_canvas/**/
+!data/patches_fixed_canvas/**/.gitkeep
+
+# Temporary experiment outputs
+*.tmp
+*.log
