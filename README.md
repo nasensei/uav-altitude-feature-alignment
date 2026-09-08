@@ -64,6 +64,12 @@ These values support the current DJI Tello pilot. The same analysis can later be
 
 The notebook calculates geometric scale and approximate ground sample distance from the selected altitudes. These calculations assume a nadir camera, approximately flat ground, fixed optics, and consistent image resolution; measurements from real matched images are still required.
 
+## Tello data collection
+
+[`scripts/tello/collect_tello_altitude.py`](scripts/tello/collect_tello_altitude.py) provides guarded, dry-run-by-default collection for supported Tello altitudes. It performs battery checks, ascends in bounded steps, saves selected 720p stream frames with synchronized telemetry, and requests landing after capture or interruption. [`scripts/tello/collect_tello_30m.py`](scripts/tello/collect_tello_30m.py) supplies the published 30 m device ceiling as a convenience target.
+
+A standard Tello cannot perform the 80 m experiment. Its published maximum flight height is 30 m, while its vision-positioning system is effective only up to 10 m. Real 80 m collection requires a different aircraft and its corresponding flight SDK. See [`scripts/tello/README.md`](scripts/tello/README.md) for setup, dry-run, collection, output, and hardware-limit details.
+
 ## Repository contents
 
 ```text
@@ -81,7 +87,12 @@ uav-altitude-feature-alignment/
 |   |-- splits/                  # Fixed experiment partitions
 |   `-- audits/                  # Compact dataset audit results
 |-- scripts/
-|   `-- audit_seadronessee_tracks.js
+|   |-- audit_seadronessee_tracks.js
+|   `-- tello/
+|       |-- collect_tello_altitude.py
+|       |-- collect_tello_30m.py
+|       `-- README.md
+|-- requirements-tello.txt
 |-- results/
 |   `-- q3a/                     # Evaluation tables and figures
 |-- uav_30m_to_80m_high_level_study_draft.pdf

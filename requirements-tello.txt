@@ -1,0 +1,2 @@
+djitellopy>=2.5,<3
+opencv-python>=4.8,<5
