@@ -55,6 +55,16 @@ Re-run the audit after placing the annotation files in the location shown above:
 node scripts/audit_seadronessee_tracks.js
 ```
 
+### Object Detection v2 altitude subsets
+
+The official compressed Object Detection v2 release is stored under `raw/seadronessee/odv2/`. The project downloader reads the release metadata and can fetch only the altitude bands needed by this study:
+
+```powershell
+python scripts/download_seadronessee_odv2.py --repo . --bands 25:35,70:100
+```
+
+This preserves the official train/validation folders, annotations, and filenames. The current bands support the 30 m baseline and a later real high-altitude evaluation while avoiding an unnecessary full download. Run the same command with `--all` to retrieve the complete labelled train/validation image release. The generated `download_manifest.json` records the selected files and their source metadata.
+
 ## Master manifest
 
 `manifest.csv` remains at the existing path because the current notebook reads it directly. Dataset-specific manifests may also be stored under `manifests/` and combined into the master manifest when an experiment uses more than one dataset.

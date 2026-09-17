@@ -76,6 +76,7 @@ A standard Tello cannot perform the 80 m experiment. Its published maximum fligh
 uav-altitude-feature-alignment/
 |-- 3a/
 |   |-- 3a.ipynb                 # Main research and experiment notebook
+|   |-- seadronessee_30m_training.ipynb # SeaDronesSee 30 m frozen-encoder baseline
 |   `-- uav_3a_protocol.pdf      # Detailed Question 3a protocol
 |-- data/
 |   |-- README.md                # Data layout, provenance, and storage rules
@@ -88,10 +89,12 @@ uav-altitude-feature-alignment/
 |   `-- audits/                  # Compact dataset audit results
 |-- scripts/
 |   |-- audit_seadronessee_tracks.js
+|   |-- download_seadronessee_odv2.py # Official selective/full dataset downloader
 |   `-- tello/
 |       |-- collect_tello_altitude.py
 |       |-- collect_tello_30m.py
 |       `-- README.md
+|-- requirements-research.txt
 |-- requirements-tello.txt
 |-- results/
 |   `-- q3a/                     # Evaluation tables and figures
@@ -100,6 +103,16 @@ uav-altitude-feature-alignment/
 ```
 
 Raw imagery, downloaded annotations, generated patches, and feature arrays are excluded by `.gitignore`. See [`data/README.md`](data/README.md) for the dataset layout, provenance requirements, and SeaDronesSee audit details.
+
+## SeaDronesSee 30 m baseline
+
+[`3a/seadronessee_30m_training.ipynb`](3a/seadronessee_30m_training.ipynb) trains the first real-data baseline from SeaDronesSee Object Detection v2 observations recorded at 25–35 m. It uses a frozen DINOv2 encoder, fixed native-pixel canvases, temporal thinning, source-video-level splits, and a linear probe. Download the required 30 m and future high-altitude subsets from the official release with:
+
+```powershell
+python scripts/download_seadronessee_odv2.py --repo . --bands 25:35,70:100
+```
+
+Use `--all` to download the complete labelled train/validation image release. Raw images and annotations remain excluded from Git.
 
 ## Notebook capabilities
 
@@ -126,7 +139,7 @@ Create and activate a Python environment from the repository root:
 py -m venv .venv
 .\.venv\Scripts\Activate.ps1
 python -m pip install --upgrade pip
-python -m pip install numpy pandas matplotlib pillow scikit-learn jupyter torch "transformers>=4.56" accelerate
+python -m pip install -r requirements-research.txt
 ```
 
 PyTorch installation can depend on the available CPU or CUDA hardware. Use the installation command recommended by [PyTorch](https://pytorch.org/get-started/locally/) if GPU support is required.
@@ -137,7 +150,7 @@ Start Jupyter:
 jupyter notebook
 ```
 
-Then open `3a/3a.ipynb` and select the environment's Python kernel.
+Then open `3a/seadronessee_30m_training.ipynb` for the 30 m baseline, or `3a/3a.ipynb` for the full Question 3a experiment, and select the environment's Python kernel.
 
 ## Data manifest
 
