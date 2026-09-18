@@ -1,0 +1,4 @@
+method,annotated_boats,unique_frames,predicted_boat,boat_recall,mean_boat_probability,median_boat_probability
+zero_shot,12,4,12,1.0,0.9758625676234564,0.9790941178798676
+geometry_R,12,4,12,1.0,0.9910238536515771,0.9914500446025519
+calibrated_R,12,4,12,1.0,0.9911560850075126,0.9915861952818368

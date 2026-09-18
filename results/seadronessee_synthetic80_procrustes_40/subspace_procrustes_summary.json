@@ -1,0 +1,111 @@
+{
+  "experiment": "reduced_dimensional_strict_orthogonal_procrustes",
+  "calibration_pairs": 1010,
+  "validation_pairs": 180,
+  "candidate_dimensions": [
+    4,
+    8,
+    16,
+    24,
+    32,
+    48,
+    64,
+    96,
+    128,
+    192,
+    256,
+    320,
+    384
+  ],
+  "zero_shot_metrics": [
+    {
+      "partition": "validation",
+      "variant": "geometry",
+      "accuracy": 0.8777777777777778,
+      "balanced_accuracy": 0.5534964170990857,
+      "macro_f1": 0.588063063063063,
+      "alignment_rmse": 0.031019798273209366,
+      "alignment_mean_paired_cosine": 0.8152522422426333
+    },
+    {
+      "partition": "validation",
+      "variant": "calibrated",
+      "accuracy": 0.8833333333333333,
+      "balanced_accuracy": 0.6368297504324191,
+      "macro_f1": 0.6638434421043118,
+      "alignment_rmse": 0.030955310608911202,
+      "alignment_mean_paired_cosine": 0.8160195955531507
+    },
+    {
+      "partition": "test",
+      "variant": "geometry",
+      "accuracy": 0.8436363636363636,
+      "balanced_accuracy": 0.28378378378378377,
+      "macro_f1": 0.28789403085177734,
+      "alignment_rmse": 0.03303079300239474,
+      "alignment_mean_paired_cosine": 0.7905216084256289
+    },
+    {
+      "partition": "test",
+      "variant": "calibrated",
+      "accuracy": 0.8436363636363636,
+      "balanced_accuracy": 0.28378378378378377,
+      "macro_f1": 0.28789403085177734,
+      "alignment_rmse": 0.03305928653512451,
+      "alignment_mean_paired_cosine": 0.7901600455374796
+    }
+  ],
+  "selected_models": [
+    {
+      "variant": "geometry",
+      "weighting": "class_balanced",
+      "subspace_dimension": 64,
+      "selection_status": "passed_validation_gate",
+      "validation_macro_f1": 0.7160597789908135,
+      "validation_macro_f1_change": 0.12799671592775053,
+      "validation_paired_cosine": 0.8227476698874966,
+      "validation_gate": true
+    },
+    {
+      "variant": "calibrated",
+      "weighting": "class_balanced",
+      "subspace_dimension": 64,
+      "selection_status": "passed_validation_gate",
+      "validation_macro_f1": 0.7189622612303026,
+      "validation_macro_f1_change": 0.055118819125990814,
+      "validation_paired_cosine": 0.8208895330597648,
+      "validation_gate": true
+    }
+  ],
+  "test_results": [
+    {
+      "variant": "geometry",
+      "weighting": "class_balanced",
+      "subspace_dimension": 64,
+      "accuracy": 0.7563636363636363,
+      "balanced_accuracy": 0.47739314204071914,
+      "macro_f1": 0.4937379351142661,
+      "alignment_rmse": 0.03461596974003599,
+      "alignment_mean_paired_cosine": 0.7699330498704955,
+      "macro_f1_change_vs_zero_shot": 0.20584390426248877,
+      "cosine_change_vs_zero_shot": -0.020588558555133418,
+      "rmse_change_vs_zero_shot": 0.0015851767376412473,
+      "passes_test_gate": false
+    },
+    {
+      "variant": "calibrated",
+      "weighting": "class_balanced",
+      "subspace_dimension": 64,
+      "accuracy": 0.7818181818181819,
+      "balanced_accuracy": 0.48510239314204073,
+      "macro_f1": 0.5064257622879333,
+      "alignment_rmse": 0.034628396389832436,
+      "alignment_mean_paired_cosine": 0.7697678386794861,
+      "macro_f1_change_vs_zero_shot": 0.218531731436156,
+      "cosine_change_vs_zero_shot": -0.02039220685799359,
+      "rmse_change_vs_zero_shot": 0.0015691098547079285,
+      "passes_test_gate": false
+    }
+  ],
+  "any_selected_mapping_passed_test_gate": false
+}

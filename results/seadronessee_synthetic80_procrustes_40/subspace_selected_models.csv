@@ -1,0 +1,3 @@
+variant,weighting,subspace_dimension,selection_status,validation_macro_f1,validation_macro_f1_change,validation_paired_cosine,validation_gate
+geometry,class_balanced,64,passed_validation_gate,0.7160597789908135,0.12799671592775053,0.8227476698874966,True
+calibrated,class_balanced,64,passed_validation_gate,0.7189622612303026,0.055118819125990814,0.8208895330597648,True

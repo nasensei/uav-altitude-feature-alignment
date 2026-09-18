@@ -1,0 +1,3 @@
+variant,weighting,dimension,status,validation_macro_f1,validation_cosine,validation_gate
+geometry,unweighted,16,passed_validation_gate,0.9229347041847041,0.8175139231774157,True
+calibrated,unweighted,24,passed_validation_gate,0.9130854547701434,0.8154638049037157,True

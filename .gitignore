@@ -1,5 +1,6 @@
 # Python and Jupyter
 .venv/
+.venv-research/
 __pycache__/
 *.py[cod]
 .ipynb_checkpoints/
@@ -23,6 +24,14 @@ data/patches_fixed_canvas/**/*
 !data/patches_fixed_canvas/**/
 !data/patches_fixed_canvas/**/.gitkeep
 
+# Generated synthetic images are reproducible and too large for Git.
+# Their manifests and dataset card remain trackable.
+data/synthetic/**/geometry_only/
+data/synthetic/**/calibrated/
+
 # Temporary experiment outputs
 *.tmp
 *.log
+
+# Local notebook/tool caches
+.cache/

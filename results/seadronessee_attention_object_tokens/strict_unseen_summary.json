@@ -1,0 +1,97 @@
+{
+  "experiment": "strict_object_disjoint_attention_token_procrustes",
+  "probe_training_objects": 1842,
+  "mapping_train_pairs": 1010,
+  "validation_pairs": 180,
+  "test_pairs": 275,
+  "test_class_counts": {
+    "boat": 37,
+    "buoy": 2,
+    "jetski": 9,
+    "swimmer": 227
+  },
+  "zero_shot": [
+    {
+      "partition": "validation",
+      "variant": "geometry",
+      "accuracy": 0.9111111111111111,
+      "balanced_accuracy": 0.6392543859649122,
+      "macro_f1": 0.6392519890503762,
+      "rmse": 0.035128165036439896,
+      "paired_cosine": 0.7630742192268372
+    },
+    {
+      "partition": "validation",
+      "variant": "calibrated",
+      "accuracy": 0.9166666666666666,
+      "balanced_accuracy": 0.6524122807017544,
+      "macro_f1": 0.654156624644667,
+      "rmse": 0.03511922061443329,
+      "paired_cosine": 0.7631949782371521
+    },
+    {
+      "partition": "test",
+      "variant": "geometry",
+      "accuracy": 0.9818181818181818,
+      "balanced_accuracy": 0.6933431228585414,
+      "macro_f1": 0.7031471231818767,
+      "rmse": 0.034654419869184494,
+      "paired_cosine": 0.7694216966629028
+    },
+    {
+      "partition": "test",
+      "variant": "calibrated",
+      "accuracy": 0.9818181818181818,
+      "balanced_accuracy": 0.6933431228585414,
+      "macro_f1": 0.7031471231818767,
+      "rmse": 0.034595850855112076,
+      "paired_cosine": 0.7702004313468933
+    }
+  ],
+  "selected": [
+    {
+      "variant": "geometry",
+      "weighting": "unweighted",
+      "dimension": 24,
+      "validation_gate": true,
+      "validation_macro_f1": 0.8798501923206694
+    },
+    {
+      "variant": "calibrated",
+      "weighting": "unweighted",
+      "dimension": 24,
+      "validation_gate": true,
+      "validation_macro_f1": 0.8798501923206694
+    }
+  ],
+  "test_results": [
+    {
+      "variant": "geometry",
+      "weighting": "unweighted",
+      "dimension": 24,
+      "accuracy": 0.9709090909090909,
+      "balanced_accuracy": 0.8406142927068037,
+      "macro_f1": 0.786031746031746,
+      "rmse": 0.029682525808717095,
+      "paired_cosine": 0.8308379655857739,
+      "macro_f1_change": 0.0828846228498693,
+      "cosine_change": 0.06141626892287111,
+      "rmse_change": -0.0049718940604673995,
+      "passes_test_gate": true
+    },
+    {
+      "variant": "calibrated",
+      "weighting": "unweighted",
+      "dimension": 24,
+      "accuracy": 0.9709090909090909,
+      "balanced_accuracy": 0.8406142927068037,
+      "macro_f1": 0.7699119736981652,
+      "rmse": 0.02965659750280964,
+      "paired_cosine": 0.8311333713382232,
+      "macro_f1_change": 0.06676485051628855,
+      "cosine_change": 0.06093293999132987,
+      "rmse_change": -0.004939253352302435,
+      "passes_test_gate": true
+    }
+  ]
+}

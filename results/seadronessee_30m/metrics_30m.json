@@ -1,0 +1,68 @@
+{
+  "macro_f1": 0.85294317716532,
+  "balanced_accuracy": 0.8835039693402683,
+  "macro_f1_image_cluster_bootstrap_95ci": [
+    0.8093895242490562,
+    0.8944773770675245
+  ],
+  "test_objects": 441,
+  "test_images": 48,
+  "test_videos": 2,
+  "classification_report": {
+    "boat": {
+      "precision": 0.8776978417266187,
+      "recall": 1.0,
+      "f1-score": 0.9348659003831418,
+      "support": 122.0
+    },
+    "buoy": {
+      "precision": 0.9583333333333334,
+      "recall": 0.92,
+      "f1-score": 0.9387755102040817,
+      "support": 25.0
+    },
+    "jetski": {
+      "precision": 0.5,
+      "recall": 0.6923076923076923,
+      "f1-score": 0.5806451612903226,
+      "support": 13.0
+    },
+    "swimmer": {
+      "precision": 0.9961538461538462,
+      "recall": 0.9217081850533808,
+      "f1-score": 0.9574861367837338,
+      "support": 281.0
+    },
+    "accuracy": 0.9365079365079365,
+    "macro avg": {
+      "precision": 0.8330462553034496,
+      "recall": 0.8835039693402683,
+      "f1-score": 0.85294317716532,
+      "support": 441.0
+    },
+    "weighted avg": {
+      "precision": 0.9466138339982121,
+      "recall": 0.9365079365079365,
+      "f1-score": 0.9390590003057795,
+      "support": 441.0
+    }
+  },
+  "validation_search": [
+    {
+      "C": 0.01,
+      "macro_f1": 0.778875523921656
+    },
+    {
+      "C": 0.1,
+      "macro_f1": 0.7797479390296559
+    },
+    {
+      "C": 1.0,
+      "macro_f1": 0.7274905582166544
+    },
+    {
+      "C": 10.0,
+      "macro_f1": 0.6596578725026059
+    }
+  ]
+}

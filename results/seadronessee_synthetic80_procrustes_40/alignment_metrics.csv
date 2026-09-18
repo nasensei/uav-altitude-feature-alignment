@@ -1,0 +1,9 @@
+partition,arm,rmse,mean_paired_cosine
+calibration,geometry_uncorrected,0.03161705217829942,0.8080695097509356
+calibration,geometry_R,0.014133853748824605,0.9616449631095808
+calibration,calibrated_uncorrected,0.031681553240841646,0.8072856068424953
+calibration,calibrated_R,0.014172707968077515,0.9614337956961858
+heldout_synthetic_test,geometry_uncorrected,0.03303079300239474,0.7905216084256289
+heldout_synthetic_test,geometry_R,0.0395976882339935,0.6989484316779987
+heldout_synthetic_test,calibrated_uncorrected,0.03305928653512451,0.7901600455374796
+heldout_synthetic_test,calibrated_R,0.03921077270185985,0.7048029373528809

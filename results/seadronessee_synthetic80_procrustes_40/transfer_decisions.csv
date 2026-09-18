@@ -1,0 +1,3 @@
+variant,macro_f1_change,paired_cosine_change,rmse_change,passes_transfer_gate
+geometry,-0.00425739247107626,-0.09157317674763021,0.006566895231598757,False
+calibrated,-0.09652493009887009,-0.08535710818459874,0.006151486166735345,False

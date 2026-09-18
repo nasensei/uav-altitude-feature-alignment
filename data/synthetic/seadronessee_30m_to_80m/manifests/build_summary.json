@@ -1,0 +1,36 @@
+{
+  "source_objects": 3307,
+  "paired_objects": 1465,
+  "excluded_objects": 1842,
+  "target_altitude_m": 80.0,
+  "output_side_px": 640,
+  "geometry_files": 1465,
+  "calibrated_files": 1465,
+  "calibration_config_sha256": "8fe6c319c145bfe6c41b4bd884be5417741d8218678ea8dfc0735cca6b82988f",
+  "calibrated_effects": {
+    "extra_psf_sigma_output_px": 0.0,
+    "visibility_m": null,
+    "airlight_srgb": [
+      0.78,
+      0.84,
+      0.9
+    ],
+    "peak_electrons": null,
+    "read_noise_electrons": 2.0,
+    "jpeg_quality": 95
+  },
+  "counts_by_split": {
+    "test": 275,
+    "train": 1010,
+    "val": 180
+  },
+  "counts_by_class": {
+    "boat": 182,
+    "buoy": 54,
+    "jetski": 34,
+    "swimmer": 1195
+  },
+  "exclusions_by_reason": {
+    "required_80m_footprint_outside_source_frame": 1842
+  }
+}

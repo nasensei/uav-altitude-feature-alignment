@@ -1,0 +1,136 @@
+{
+  "experiment": "background_masked_cls_procrustes",
+  "representation": "CLS_from_bbox_pixels_on_constant_640_canvas",
+  "probe_training_objects": 1842,
+  "mapping_train_pairs": 1010,
+  "validation_pairs": 180,
+  "test_pairs": 275,
+  "zero_shot": [
+    {
+      "partition": "validation",
+      "variant": "geometry",
+      "accuracy": 0.7888888888888889,
+      "balanced_accuracy": 0.31932218309859156,
+      "macro_f1": 0.31015452538631344,
+      "rmse": 0.0302279032766819,
+      "paired_cosine": 0.8245646357536316
+    },
+    {
+      "partition": "validation",
+      "variant": "calibrated",
+      "accuracy": 0.7944444444444444,
+      "balanced_accuracy": 0.33248007783543365,
+      "macro_f1": 0.33802808860470424,
+      "rmse": 0.03025350533425808,
+      "paired_cosine": 0.8242672681808472
+    },
+    {
+      "partition": "test",
+      "variant": "geometry",
+      "accuracy": 0.8581818181818182,
+      "balanced_accuracy": 0.513659033482822,
+      "macro_f1": 0.5042036124794745,
+      "rmse": 0.034959305077791214,
+      "paired_cosine": 0.7653467059135437
+    },
+    {
+      "partition": "test",
+      "variant": "calibrated",
+      "accuracy": 0.8581818181818182,
+      "balanced_accuracy": 0.513659033482822,
+      "macro_f1": 0.5066666666666667,
+      "rmse": 0.03501329943537712,
+      "paired_cosine": 0.7646212577819824
+    }
+  ],
+  "selected": [
+    {
+      "variant": "geometry",
+      "weighting": "unweighted",
+      "dimension": 48,
+      "selection_status": "passed_validation_gate",
+      "validation_macro_f1": 0.5816513056835637,
+      "validation_cosine": 0.897764206332631
+    },
+    {
+      "variant": "calibrated",
+      "weighting": "unweighted",
+      "dimension": 64,
+      "selection_status": "passed_validation_gate",
+      "validation_macro_f1": 0.6481071630689628,
+      "validation_cosine": 0.8952205539936573
+    }
+  ],
+  "test_results": [
+    {
+      "variant": "geometry",
+      "weighting": "unweighted",
+      "dimension": 48,
+      "accuracy": 0.9672727272727273,
+      "balanced_accuracy": 0.608908467939305,
+      "macro_f1": 0.6309142399450769,
+      "rmse": 0.028111862149270448,
+      "paired_cosine": 0.8482668685833883,
+      "macro_f1_change": 0.12671062746560235,
+      "cosine_change": 0.08292016266984459,
+      "rmse_change": -0.006847442928520766,
+      "passes_test_gate": true
+    },
+    {
+      "variant": "calibrated",
+      "weighting": "unweighted",
+      "dimension": 64,
+      "accuracy": 0.9563636363636364,
+      "balanced_accuracy": 0.6686675662446588,
+      "macro_f1": 0.6864868561227722,
+      "rmse": 0.028143025661374603,
+      "paired_cosine": 0.8479302736811606,
+      "macro_f1_change": 0.17982018945610545,
+      "cosine_change": 0.08330901589917816,
+      "rmse_change": -0.006870273774002518,
+      "passes_test_gate": true
+    }
+  ],
+  "comparison_with_attention_tokens": [
+    {
+      "representation": "background-masked CLS",
+      "variant": "geometry",
+      "zero_shot_macro_f1": 0.5042036124794745,
+      "corrected_macro_f1": 0.6309142399450769,
+      "macro_f1_improvement": 0.12671062746560235,
+      "balanced_accuracy": 0.608908467939305,
+      "selected_dimension": 48,
+      "passes_test_gate": true
+    },
+    {
+      "representation": "background-masked CLS",
+      "variant": "calibrated",
+      "zero_shot_macro_f1": 0.5066666666666667,
+      "corrected_macro_f1": 0.6864868561227722,
+      "macro_f1_improvement": 0.17982018945610545,
+      "balanced_accuracy": 0.6686675662446588,
+      "selected_dimension": 64,
+      "passes_test_gate": true
+    },
+    {
+      "representation": "attention-weighted object tokens",
+      "variant": "geometry",
+      "zero_shot_macro_f1": 0.7031471231818767,
+      "corrected_macro_f1": 0.786031746031746,
+      "macro_f1_improvement": 0.0828846228498693,
+      "balanced_accuracy": 0.8406142927068037,
+      "selected_dimension": 24,
+      "passes_test_gate": true
+    },
+    {
+      "representation": "attention-weighted object tokens",
+      "variant": "calibrated",
+      "zero_shot_macro_f1": 0.7031471231818767,
+      "corrected_macro_f1": 0.7699119736981652,
+      "macro_f1_improvement": 0.06676485051628855,
+      "balanced_accuracy": 0.8406142927068037,
+      "selected_dimension": 24,
+      "passes_test_gate": true
+    }
+  ]
+}

@@ -1,0 +1,3 @@
+class_name,source_file,source_altitude_m,source_bbox_width_px,source_bbox_height_px,synthetic_bbox_width_px,synthetic_bbox_height_px,linear_scale,source_crop_side_px,output_side_px,transmission
+boat,16280.jpg,29.89854190795489,203.0,56.0,75.88785046728972,20.934579439252335,0.37383177570093457,1712,640,0.9870446524445435
+swimmer,10394.jpg,30.19852727826882,30.0,30.0,11.327433628318584,11.327433628318584,0.3775811209439528,1695,640,0.9870446524445435

@@ -1,0 +1,5 @@
+representation,variant,zero_shot_macro_f1,corrected_macro_f1,macro_f1_improvement,balanced_accuracy,selected_dimension,passes_test_gate
+background-masked CLS,geometry,0.5042036124794745,0.6309142399450769,0.12671062746560235,0.608908467939305,48,True
+background-masked CLS,calibrated,0.5066666666666667,0.6864868561227722,0.17982018945610545,0.6686675662446588,64,True
+attention-weighted object tokens,geometry,0.7031471231818767,0.786031746031746,0.0828846228498693,0.8406142927068037,24,True
+attention-weighted object tokens,calibrated,0.7031471231818767,0.7699119736981652,0.06676485051628855,0.8406142927068037,24,True

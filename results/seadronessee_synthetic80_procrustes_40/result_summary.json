@@ -1,0 +1,115 @@
+{
+  "experiment": "synthetic80_to_real30_strict_procrustes_40pair_pilot",
+  "status": "exploratory_due_to_rank_limit",
+  "calibration_pairs": 40,
+  "pairs_per_class": 10,
+  "feature_dimension": 384,
+  "geometry_constrained_rank": 40,
+  "calibrated_constrained_rank": 40,
+  "test_objects": 275,
+  "test_class_counts": {
+    "swimmer": 227,
+    "boat": 37,
+    "jetski": 9,
+    "buoy": 2
+  },
+  "classification_metrics": [
+    {
+      "arm": "real30_reference",
+      "accuracy": 0.9236363636363636,
+      "balanced_accuracy": 0.9235193343122858,
+      "macro_f1": 0.8078072418898911
+    },
+    {
+      "arm": "geometry_zero_shot",
+      "accuracy": 0.8763636363636363,
+      "balanced_accuracy": 0.3445945945945946,
+      "macro_f1": 0.37031445021540443
+    },
+    {
+      "arm": "geometry_strict_R",
+      "accuracy": 0.6945454545454546,
+      "balanced_accuracy": 0.5429813072984879,
+      "macro_f1": 0.3660570577443282
+    },
+    {
+      "arm": "calibrated_zero_shot",
+      "accuracy": 0.8763636363636363,
+      "balanced_accuracy": 0.3445945945945946,
+      "macro_f1": 0.37031445021540443
+    },
+    {
+      "arm": "calibrated_strict_R",
+      "accuracy": 0.5963636363636363,
+      "balanced_accuracy": 0.47771229379158897,
+      "macro_f1": 0.27378952011653435
+    }
+  ],
+  "alignment_metrics": [
+    {
+      "partition": "calibration",
+      "arm": "geometry_uncorrected",
+      "rmse": 0.03161705217829942,
+      "mean_paired_cosine": 0.8080695097509356
+    },
+    {
+      "partition": "calibration",
+      "arm": "geometry_R",
+      "rmse": 0.014133853748824605,
+      "mean_paired_cosine": 0.9616449631095808
+    },
+    {
+      "partition": "calibration",
+      "arm": "calibrated_uncorrected",
+      "rmse": 0.031681553240841646,
+      "mean_paired_cosine": 0.8072856068424953
+    },
+    {
+      "partition": "calibration",
+      "arm": "calibrated_R",
+      "rmse": 0.014172707968077515,
+      "mean_paired_cosine": 0.9614337956961858
+    },
+    {
+      "partition": "heldout_synthetic_test",
+      "arm": "geometry_uncorrected",
+      "rmse": 0.03303079300239474,
+      "mean_paired_cosine": 0.7905216084256289
+    },
+    {
+      "partition": "heldout_synthetic_test",
+      "arm": "geometry_R",
+      "rmse": 0.0395976882339935,
+      "mean_paired_cosine": 0.6989484316779987
+    },
+    {
+      "partition": "heldout_synthetic_test",
+      "arm": "calibrated_uncorrected",
+      "rmse": 0.03305928653512451,
+      "mean_paired_cosine": 0.7901600455374796
+    },
+    {
+      "partition": "heldout_synthetic_test",
+      "arm": "calibrated_R",
+      "rmse": 0.03921077270185985,
+      "mean_paired_cosine": 0.7048029373528809
+    }
+  ],
+  "transfer_decisions": [
+    {
+      "variant": "geometry",
+      "macro_f1_change": -0.00425739247107626,
+      "paired_cosine_change": -0.09157317674763021,
+      "rmse_change": 0.006566895231598757,
+      "passes_transfer_gate": false
+    },
+    {
+      "variant": "calibrated",
+      "macro_f1_change": -0.09652493009887009,
+      "paired_cosine_change": -0.08535710818459874,
+      "rmse_change": 0.006151486166735345,
+      "passes_transfer_gate": false
+    }
+  ],
+  "interpretation": "Neither strict 40-pair mapping passed the synthetic held-out transfer gate. A larger or reduced-dimensional calibration study is required before evaluation on untouched genuine 80 m imagery."
+}

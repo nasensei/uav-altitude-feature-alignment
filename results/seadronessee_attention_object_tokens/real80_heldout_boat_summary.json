@@ -1,0 +1,48 @@
+{
+  "experiment": "unmatched_genuine_80m_boat_sanity_check",
+  "altitude_range_m": [
+    75.0,
+    85.0
+  ],
+  "reserved_videos": [
+    "DJI_0064.MP4",
+    "DJI_0065.MP4"
+  ],
+  "videos_containing_eligible_boats": [
+    "DJI_0065.MP4"
+  ],
+  "annotations": 12,
+  "unique_frames": 4,
+  "ground_truth_boxes_used": true,
+  "paired_30m_observations_available": false,
+  "summary": [
+    {
+      "method": "zero_shot",
+      "annotated_boats": 12,
+      "unique_frames": 4,
+      "predicted_boat": 12,
+      "boat_recall": 1.0,
+      "mean_boat_probability": 0.9758625676234564,
+      "median_boat_probability": 0.9790941178798676
+    },
+    {
+      "method": "geometry_R",
+      "annotated_boats": 12,
+      "unique_frames": 4,
+      "predicted_boat": 12,
+      "boat_recall": 1.0,
+      "mean_boat_probability": 0.9910238536515771,
+      "median_boat_probability": 0.9914500446025519
+    },
+    {
+      "method": "calibrated_R",
+      "annotated_boats": 12,
+      "unique_frames": 4,
+      "predicted_boat": 12,
+      "boat_recall": 1.0,
+      "mean_boat_probability": 0.9911560850075126,
+      "median_boat_probability": 0.9915861952818368
+    }
+  ],
+  "interpretation": "Classification-only external sanity check. Repeated annotations from four frames in one video are not independent and cannot establish general real-80 m performance."
+}

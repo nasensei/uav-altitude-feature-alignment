@@ -1,0 +1,60 @@
+{
+  "method": "unlabelled low-level statistic matching",
+  "real80_altitude_range_m": [
+    75.0,
+    85.0
+  ],
+  "calibration_videos": [
+    "NorthSea_Thu_DJI_0107.MP4",
+    "NorthSea_Sat_DJI_0129.MP4"
+  ],
+  "validation_videos": [
+    "NorthSea_Sat_DJI_0131.MP4"
+  ],
+  "heldout_test_videos_not_opened": [
+    "DJI_0064.MP4",
+    "DJI_0065.MP4"
+  ],
+  "metrics": [
+    "luminance_mean",
+    "contrast",
+    "saturation",
+    "gradient_ratio",
+    "blockiness"
+  ],
+  "metric_weights": {
+    "luminance_mean": 0.25,
+    "contrast": 1.0,
+    "saturation": 0.5,
+    "gradient_ratio": 1.5,
+    "blockiness": 0.75
+  },
+  "candidate_effects": {
+    "extra_psf_sigma_output_px": 0.0,
+    "visibility_m": null,
+    "airlight_srgb": [
+      0.78,
+      0.84,
+      0.9
+    ],
+    "peak_electrons": null,
+    "read_noise_electrons": 2.0,
+    "jpeg_quality": 95
+  },
+  "calibration_score": 11.318515465609597,
+  "geometry_validation_score": 14.476371770929195,
+  "calibrated_validation_score": 12.97391082654724,
+  "accepted": true,
+  "effects_for_dataset": {
+    "extra_psf_sigma_output_px": 0.0,
+    "visibility_m": null,
+    "airlight_srgb": [
+      0.78,
+      0.84,
+      0.9
+    ],
+    "peak_electrons": null,
+    "read_noise_electrons": 2.0,
+    "jpeg_quality": 95
+  }
+}
